@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = 'The Quick Brown Fox';
+    const UPPER = 'THE QUICK BROWN FOX';
+    const LOWER = 'the quick brown fox';
+    const result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(UPPER.includes(str[x]))
+        {
+            result.push(str[x].toLowerCase());//toLowerCase:chuyển đổi sang chữ thường
+        }
+        else if(LOWER.includes(str[x]))
+        {
+            result.push(str[x].toUpperCase());//toUpperCase: chuyển đổi sang chữ hoa
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+</script>
+</body>
+</html>
